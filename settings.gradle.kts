@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Musify"
 include(":app")
- 
+include(":theme")
