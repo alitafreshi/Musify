@@ -1,7 +1,6 @@
 package com.tafreshiali.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.text.TextStyle
@@ -115,3 +114,14 @@ fun MusifyTheme(
         content = content
     )
 }
+
+object MusifyTheme {
+    val colorScheme: MusifyColorScheme
+        @Composable
+        get() = LocalMusifyColorScheme.current
+    val typography: MusifyTypography
+        @Composable
+        get() = LocalMusifyTypography.current
+}
+
+
