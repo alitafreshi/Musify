@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Musify</string>
+    <string name="bottom_bar_tv_my_songs_title">My Songs</string>
+    <string name="bottom_bar_tv_artists_title">Artists</string>
+    <string name="bottom_bar_tv_playlist_title">Playlist</string>
+    <string name="bottom_bar_tv_favorites_title">Favorites</string>
 </resources>

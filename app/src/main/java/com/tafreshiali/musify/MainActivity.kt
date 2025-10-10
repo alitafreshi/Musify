@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.runtime.Composable
+import androidx.navigation.compose.rememberNavController
 import com.tafreshiali.theme.MusifyTheme
 
 class MainActivity : ComponentActivity() {
@@ -12,7 +14,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MusifyTheme {
+                AppRoot()
             }
         }
     }
+}
+
+
+@Composable
+private fun AppRoot() {
+    val navController = rememberNavController()
 }
