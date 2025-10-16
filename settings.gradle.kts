@@ -23,3 +23,5 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "Musify"
 include(":app")
 include(":theme")
+include(":my-songs")
+include(":my-songs:presentation")
