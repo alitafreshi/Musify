@@ -4,8 +4,17 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.navigation.NavDestination.Companion.hierarchy
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.tafreshiali.presentation.MysSongsDestination
+import com.tafreshiali.presentation.mySongsScreen
 import com.tafreshiali.theme.MusifyTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,4 +33,26 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun AppRoot() {
     val navController = rememberNavController()
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        bottomBar = {
+            AppBottomBar(
+                hierarchy = navController.currentBackStackEntryAsState().value?.destination?.hierarchy,
+                onNavigateToMySongs = {
+
+                },
+                onNavigateToArtists = {},
+                onNavigateToPlaylist = {},
+                onNavigateToFavorites = {}
+            )
+        }
+    ) { paddingValues ->
+        NavHost(
+            modifier = Modifier.padding(paddingValues),
+            navController = navController,
+            startDestination = MysSongsDestination
+        ) {
+            mySongsScreen()
+        }
+    }
 }

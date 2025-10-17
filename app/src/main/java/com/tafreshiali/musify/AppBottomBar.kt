@@ -9,26 +9,34 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavDestination
 import com.tafreshiali.theme.MusifyTheme
+import com.tafreshiali.theme.R.drawable
 
 @Composable
-fun AppBottomBar() {
+fun AppBottomBar(
+    hierarchy: Sequence<NavDestination>?,
+    onNavigateToMySongs: () -> Unit,
+    onNavigateToArtists: () -> Unit,
+    onNavigateToPlaylist: () -> Unit,
+    onNavigateToFavorites: () -> Unit
+) {
     NavigationBar {
-        BottomBarHomeItem()
-        BottomBarSearchItem()
-        BottomBarPlaylistItem()
-        BottomBarProfileItem()
+        BottomBarMySongsItem(onNavigateToMySongs)
+        BottomBarArtistsItem(onNavigateToArtists)
+        BottomBarPlaylistItem(onNavigateToPlaylist)
+        BottomBarFavoritesItem(onNavigateToFavorites)
     }
 }
 
 @Composable
-fun RowScope.BottomBarHomeItem() {
+fun RowScope.BottomBarMySongsItem(onNavigateToMySongs: () -> Unit) {
     NavigationBarItem(
         selected = true,
-        onClick = { /*TODO*/ },
+        onClick = onNavigateToMySongs,
         icon = {
             Icon(
-                painter = painterResource(id = com.tafreshiali.theme.R.drawable.ic_mymusics_24),
+                painter = painterResource(id = drawable.ic_mymusics_24),
                 contentDescription = "My Songs BottomBar Icon"
             )
         },
@@ -43,13 +51,13 @@ fun RowScope.BottomBarHomeItem() {
 }
 
 @Composable
-fun RowScope.BottomBarSearchItem() {
+fun RowScope.BottomBarArtistsItem(onNavigateToArtists: () -> Unit) {
     NavigationBarItem(
         selected = false,
-        onClick = { /*TODO*/ },
+        onClick = onNavigateToArtists,
         icon = {
             Icon(
-                painter = painterResource(id = com.tafreshiali.theme.R.drawable.ic_artist_24),
+                painter = painterResource(id = drawable.ic_artist_24),
                 contentDescription = "Artists BottomBar Icon"
             )
         },
@@ -61,13 +69,13 @@ fun RowScope.BottomBarSearchItem() {
 
 
 @Composable
-fun RowScope.BottomBarPlaylistItem() {
+fun RowScope.BottomBarPlaylistItem(onNavigateToPlaylist: () -> Unit) {
     NavigationBarItem(
         selected = false,
-        onClick = { /*TODO*/ },
+        onClick = onNavigateToPlaylist,
         icon = {
             Icon(
-                painter = painterResource(id = com.tafreshiali.theme.R.drawable.ic_playlist_24),
+                painter = painterResource(id = drawable.ic_playlist_24),
                 contentDescription = "Playlist BottomBar Icon"
             )
         },
@@ -79,13 +87,13 @@ fun RowScope.BottomBarPlaylistItem() {
 
 
 @Composable
-fun RowScope.BottomBarProfileItem() {
+fun RowScope.BottomBarFavoritesItem(onNavigateToFavorites: () -> Unit) {
     NavigationBarItem(
         selected = false,
-        onClick = { /*TODO*/ },
+        onClick = onNavigateToFavorites,
         icon = {
             Icon(
-                painter = painterResource(id = com.tafreshiali.theme.R.drawable.ic_favorites_24),
+                painter = painterResource(id = drawable.ic_favorites_24),
                 contentDescription = "Favorites BottomBar Icon"
             )
         },
@@ -100,6 +108,12 @@ fun RowScope.BottomBarProfileItem() {
 @Composable
 fun AppBottomBarPreview() {
     MusifyTheme {
-        AppBottomBar()
+        AppBottomBar(
+            hierarchy = null,
+            onNavigateToMySongs = {},
+            onNavigateToArtists = {},
+            onNavigateToPlaylist = {},
+            onNavigateToFavorites = {}
+        )
     }
 }
