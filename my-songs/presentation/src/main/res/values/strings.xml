@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="my_songs_tv_empty_state_title">No Songs</string>
+    <string name="my_songs_tv_empty_state_description">No songs found on your phone</string>
+</resources>
