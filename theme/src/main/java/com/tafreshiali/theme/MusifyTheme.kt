@@ -9,6 +9,7 @@ import androidx.compose.ui.unit.sp
 
 private val LightColorScheme = MusifyColorScheme(
     primary = LightPrimary,
+    onPrimary = LightOnPrimary,
     background = LightBackground,
     background80 = LightBackground80,
     onBackground = LightOnBackground,
@@ -19,6 +20,7 @@ private val LightColorScheme = MusifyColorScheme(
 
 private val DarkColorScheme = MusifyColorScheme(
     primary = DarkPrimary,
+    onPrimary = DarkOnPrimary,
     background = DarkBackground,
     background80 = DarkBackground80,
     onBackground = DarkOnBackground,

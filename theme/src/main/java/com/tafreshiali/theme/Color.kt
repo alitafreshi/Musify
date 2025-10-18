@@ -5,6 +5,7 @@ import androidx.compose.ui.graphics.Color
 
 //Light Colors
 val LightPrimary = Color(0xFFC2223D)
+val LightOnPrimary = Color(0xFFFFFFFF)
 val LightBackground = Color(0xFFF5F6F7)
 val LightBackground80 = Color(0xFFF5F6F7).copy(alpha = 0.8f)
 val LightOnBackground = Color(0xFF1B1C33)
@@ -13,6 +14,7 @@ val LightController = Color(0xFFF5F7FC)
 
 //Dark Colors
 val DarkPrimary = Color(0xFFC2223D)
+val DarkOnPrimary = Color(0xFFFFFFFF)
 val DarkBackground = Color(0xFF100F12)
 val DarkBackground80 = Color(0xFF100F12).copy(alpha = 0.8f)
 val DarkOnBackground = Color(0xFFFAFAFA)

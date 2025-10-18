@@ -5,6 +5,7 @@ import androidx.compose.ui.graphics.Color
 
 data class MusifyColorScheme(
     val primary: Color,
+    val onPrimary: Color,
     val background: Color,
     val background80: Color,
     val onBackground: Color,
@@ -15,6 +16,7 @@ data class MusifyColorScheme(
 val LocalMusifyColorScheme = staticCompositionLocalOf {
     MusifyColorScheme(
         primary = Color.Unspecified,
+        onPrimary = Color.Unspecified,
         background = Color.Unspecified,
         background80 = Color.Unspecified,
         onBackground = Color.Unspecified,
