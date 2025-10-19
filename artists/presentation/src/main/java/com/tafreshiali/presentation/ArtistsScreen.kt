@@ -4,15 +4,15 @@ import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.tafreshiali.artists.presentation.R
 import com.tafreshiali.components.EmptyStateScreen
-import com.tafreshiali.my_songs.presentation.R
 import com.tafreshiali.theme.MusifyTheme
 
 @Composable
-internal fun MySongsScreen() {
+internal fun ArtistsScreen() {
     EmptyStateScreen(
-        title = stringResource(R.string.my_songs_tv_empty_state_title),
-        description = stringResource(R.string.my_songs_tv_empty_state_description),
+        title = stringResource(R.string.artists_tv_empty_state_title),
+        description = stringResource(R.string.artists_tv_empty_state_description),
     )
 }
 
@@ -26,8 +26,8 @@ internal fun MySongsScreen() {
     uiMode = UI_MODE_NIGHT_YES
 )
 @Composable
-private fun MySongsScreenPreview() {
+private fun ArtistsScreenPreview() {
     MusifyTheme {
-        MySongsScreen()
+        ArtistsScreen()
     }
 }

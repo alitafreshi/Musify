@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.tafreshiali.presentation"
+    namespace = "com.tafreshiali.my_songs.presentation"
     resourcePrefix = "my_songs"
     compileSdk {
         version = release(36)

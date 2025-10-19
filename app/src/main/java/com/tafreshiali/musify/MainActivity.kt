@@ -14,7 +14,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.tafreshiali.presentation.MysSongsDestination
+import com.tafreshiali.presentation.artistsScreen
 import com.tafreshiali.presentation.mySongsScreen
+import com.tafreshiali.presentation.navigateToArtists
+import com.tafreshiali.presentation.navigateToMySongs
 import com.tafreshiali.theme.MusifyTheme
 
 class MainActivity : ComponentActivity() {
@@ -39,9 +42,11 @@ private fun AppRoot() {
             AppBottomBar(
                 hierarchy = navController.currentBackStackEntryAsState().value?.destination?.hierarchy,
                 onNavigateToMySongs = {
-
+                    navController.navigateToMySongs()
                 },
-                onNavigateToArtists = {},
+                onNavigateToArtists = {
+                    navController.navigateToArtists()
+                },
                 onNavigateToPlaylist = {},
                 onNavigateToFavorites = {}
             )
@@ -53,6 +58,7 @@ private fun AppRoot() {
             startDestination = MysSongsDestination
         ) {
             mySongsScreen()
+            artistsScreen()
         }
     }
 }
