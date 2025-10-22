@@ -4,12 +4,12 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias (libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.tafreshiali.my_songs.presentation"
-    resourcePrefix = "my_songs"
+    namespace = "com.tafreshiali.favorites.presentation"
+    resourcePrefix = "favorites"
     compileSdk {
         version = release(36)
     }

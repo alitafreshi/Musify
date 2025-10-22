@@ -60,6 +60,7 @@ dependencies {
     implementation(projects.mySongs.presentation)
     implementation(projects.artists.presentation)
     implementation(projects.playlist.presentation)
+    implementation(projects.favorites.presentation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

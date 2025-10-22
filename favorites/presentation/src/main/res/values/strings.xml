@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="favorites_tv_empty_state_title">No favorites</string>
+    <string name="favorites_tv_empty_state_description">No favorites found on your phone</string>
+</resources>

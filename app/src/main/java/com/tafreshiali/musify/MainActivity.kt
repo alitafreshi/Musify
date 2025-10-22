@@ -15,8 +15,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.tafreshiali.presentation.MysSongsDestination
 import com.tafreshiali.presentation.artistsScreen
+import com.tafreshiali.presentation.favoritesScreen
 import com.tafreshiali.presentation.mySongsScreen
 import com.tafreshiali.presentation.navigateToArtists
+import com.tafreshiali.presentation.navigateToFavorites
 import com.tafreshiali.presentation.navigateToMySongs
 import com.tafreshiali.presentation.navigateToPlaylist
 import com.tafreshiali.presentation.playlistScreen
@@ -52,7 +54,9 @@ private fun AppRoot() {
                 onNavigateToPlaylist = {
                     navController.navigateToPlaylist()
                 },
-                onNavigateToFavorites = {}
+                onNavigateToFavorites = {
+                    navController.navigateToFavorites()
+                }
             )
         }
     ) { paddingValues ->
@@ -64,6 +68,7 @@ private fun AppRoot() {
             mySongsScreen()
             artistsScreen()
             playlistScreen()
+            favoritesScreen()
         }
     }
 }
