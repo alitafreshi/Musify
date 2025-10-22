@@ -18,6 +18,8 @@ import com.tafreshiali.presentation.artistsScreen
 import com.tafreshiali.presentation.mySongsScreen
 import com.tafreshiali.presentation.navigateToArtists
 import com.tafreshiali.presentation.navigateToMySongs
+import com.tafreshiali.presentation.navigateToPlaylist
+import com.tafreshiali.presentation.playlistScreen
 import com.tafreshiali.theme.MusifyTheme
 
 class MainActivity : ComponentActivity() {
@@ -47,7 +49,9 @@ private fun AppRoot() {
                 onNavigateToArtists = {
                     navController.navigateToArtists()
                 },
-                onNavigateToPlaylist = {},
+                onNavigateToPlaylist = {
+                    navController.navigateToPlaylist()
+                },
                 onNavigateToFavorites = {}
             )
         }
@@ -59,6 +63,7 @@ private fun AppRoot() {
         ) {
             mySongsScreen()
             artistsScreen()
+            playlistScreen()
         }
     }
 }
